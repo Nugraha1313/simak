@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landingpage.index');
 });
+
+Route::get('/administrator', function () {
+    return view('admin.home');
+});
+
+Route::get('/administrator/home', function () {
+    return view('admin.home');
+});
+
+Route::get('/administrator/DataMaster', function () {
+    return view('admin.DataMaster');
+});
+
+Route::get('/administrator/TahunAkademik', function () {
+    return view('admin.TahunAkademik');
+});
+Route::get('/administrator/JadwalKuliah', function () {
+    return view('admin.JadwalKuliah');
+});
+Route::get('/administrator/Dosen', function () {
+    return view('admin.Dosen');
+});
+Route::get('/administrator/Mahasiswa', function () {
+    return view('admin.Mahasiswa');
+});

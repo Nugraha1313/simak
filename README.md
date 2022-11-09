@@ -11,6 +11,7 @@ git clone https://github.com/Nugraha1313/simak.git
 cd simak
 composer install
 cp .env.example .env
+php artisan key:generate
 ```
 
 2. **Jalankan website**

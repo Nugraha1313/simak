@@ -57,7 +57,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    {{-- <li><a class="nav-link scrollto active" href="#hero">Home</a></li> --}}
+                    <li><a class="nav-link scrollto active" href="{{ route('administrator') }}">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -76,7 +76,7 @@
                         <h2>Akses berbagai sistem informasi akademik melalui satu pintu, dan dapatkan kemudahan semua
                             informasi dalam 1 genggaman.</h2>
                         <div class="text-center text-lg-start">
-                            <a href=" {{asset('administrator/home')}} " class="btn-get-started scrollto">Login</a>
+                            <a href=" {{url('/administrator')}} " class="btn-get-started scrollto">Login</a>
                         </div>
                     </div>
                 </div>

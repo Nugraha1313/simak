@@ -1,9 +1,9 @@
-@extends('admin.index')
+@extends('admin.layouts.app')
 @section('content')
 <div class="container-fluid py-4">
     <div class="card">
         <div class="card-header">
-            <h1>Data Dosen</h1>
+            <h3>Data Mahasiswa</h3>
         </div>
     </div>
 </div>

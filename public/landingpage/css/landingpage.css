@@ -130,7 +130,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: rgba(1, 4, 136, 0.9);
+  background: rgba(1, 4, 136, 0.902);
 }
 
 #header.header-transparent {

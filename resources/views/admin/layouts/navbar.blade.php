@@ -13,7 +13,7 @@
               <input type="text" class="form-control" placeholder="Type here..." hidden>
             </div>
           </div>
-          <ul class="navbar-nav  justify-content-end">
+          <ul class="navbar-nav justify-content-end">
             {{-- SETTING PROFILE --}}
             <li class="nav-item px-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0">
@@ -24,7 +24,7 @@
             <li class="nav-item d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body font-weight-bold px-0" style="color: rgba(1, 4, 136, 0.9)">
                 {{-- <i class="fa fa-user me-sm-1"></i> --}}
-                <span class="d-sm-inline d-none">Logout</span>
+                <span class="d-sm-inline d-none">Logout </span>
                 <i class="bi bi-box-arrow-right me-sm-1"></i>
               </a>
             </li>

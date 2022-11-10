@@ -9,7 +9,7 @@
 
                 <div class="row content">
                     <div class="col-md-4" data-aos="fade-right">
-                        <img src="{{ asset('landingpage/img/details-1.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('public/landingpage/img/details-1.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-8 pt-4" data-aos="fade-up">
                         <h3>Akses website SIMAK</h3>
@@ -33,7 +33,7 @@
 
                 <div class="row content">
                     <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-                        <img src="{{ asset('landingpage/img/details-4.png') }}" class="img-fluid" alt="">
+                        <img src="{{ asset('public/landingpage/img/details-4.png') }}" class="img-fluid" alt="">
                     </div>
                     <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
                         <h3>Masuk ke dashboard SIMAK</h3>
@@ -106,7 +106,7 @@
 
                     <div class="col-lg col-md-6">
                         <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-1.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('public/landingpage/img/team/team-1.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>M.Aulia Nugraha</h4>
@@ -123,7 +123,7 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-md-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-2.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('public/landingpage/img/team/team-2.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Fathimah</h4>
@@ -140,7 +140,7 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-3.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('public/landingpage/img/team/team-3.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Cindy</h4>
@@ -157,7 +157,7 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-4.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('public/landingpage/img/team/team-4.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Rendi</h4>
@@ -174,7 +174,7 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-2.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('public/landingpage/img/team/team-2.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Muthia</h4>

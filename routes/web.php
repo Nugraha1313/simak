@@ -17,18 +17,47 @@ Route::get('/', function () {
     return view('landingpage.index');
 })->name('home');
 
-Route::get('/administrator', function () {
-    return view('admin.index');
-})->name('administrator');
+//================= ADMIN ==================
+Route::prefix('administrator.')->group(function () {
+    Route::get('/', function () {
+        return view('admin.index');
+    })->name('administrator');
 
-Route::get('/administrator/tahun-akademik', function () {
-    return view('admin.tahun.index');
+    // TAHUN AKADEMIK
+    Route::get('/tahun-akademik', function () {
+        return view('admin.tahun.index');
+    });
+
+    // DOSEN
+    Route::get('/dosen', function () {
+        return view('admin.dosen.index');
+    });
+
+    // MAHASISWA
+    Route::get('/mahasiswa', function () {
+        return view('admin.mahasiswa.index');
+    });
 });
 
-Route::get('/administrator/dosen', function () {
-    return view('admin.dosen.index');
-});
 
-Route::get('/administrator/mahasiswa', function () {
-    return view('admin.mahasiswa.index');
+//================= MAHASISWA =================
+Route::prefix('dashboard/mahasiswa')->group(function () {
+    Route::get('/', function () {
+        return view('mahasiswa.index');
+    })->name('dashboard.mahasiswa');
+
+    // JADWAL
+    Route::get('/jadwal', function () {
+        return view('mahasiswa.jadwal.index');
+    });
+
+    // KRS
+    Route::get('/krs', function () {
+        return view('mahasiswa.krs.index');
+    });
+
+    // KHS
+    Route::get('/khs', function () {
+        return view('mahasiswa.khs.index');
+    });
 });

@@ -10396,6 +10396,10 @@ fieldset:disabled .btn {
   font-family: var(--bs-font-monospace) !important;
 }
 
+.font-sans {
+  font-family: var(--bs-font-sans-serif) !important;
+}
+
 .fs-1 {
   font-size: calc(1.425rem + 2.1vw) !important;
 }

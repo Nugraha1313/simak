@@ -28,6 +28,10 @@
           <span class="nav-link-text ms-1">Kurikulum</span>
         </a>
       </li>
+      {{-- DATA MASTER --}}
+      <li class="nav-item mt-3">
+        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Data Master</h6>
+      </li>
       {{-- DATA DOSEN --}}
       <li class="nav-item">
         <a class="nav-link" href="{{url('administrator/dosen')}} ">
@@ -46,13 +50,9 @@
           <span class="nav-link-text ms-1">Data Mahasiswa</span>
         </a>
       </li>
-      {{-- DATA MASTER --}}
-      <li class="nav-item mt-3">
-        <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Data Master</h6>
-      </li>
       {{-- TAHUN AKADEMIK --}}
       <li class="nav-item">
-        <a class="nav-link  " href="{{url('administrator/tahun')}} ">
+        <a class="nav-link  " href="{{url('administrator/tahun-akademik')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-calendar-fill fs-6"></i>
           </div>
@@ -61,7 +61,7 @@
       </li>
       {{-- MATA KULIAH --}}
       <li class="nav-item">
-        <a class="nav-link  " href="{{url('administrator/matkul')}} ">
+        <a class="nav-link  " href="{{url('administrator/mata-kuliah')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-card-list fs-6"></i>
           </div>

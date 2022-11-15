@@ -18,14 +18,29 @@ Route::get('/', function () {
 })->name('home');
 
 //================= ADMIN ==================
-Route::prefix('administrator.')->group(function () {
+Route::prefix('administrator')->group(function () {
     Route::get('/', function () {
         return view('admin.index');
     })->name('administrator');
 
+    // KURIKULUM
+    Route::get('/kurikulum', function () {
+        return view('admin.kurikulum.index');
+    });
+
+    // MATKUL
+    Route::get('/mata-kuliah', function () {
+        return view('admin.matkul.index');
+    });
+
     // TAHUN AKADEMIK
     Route::get('/tahun-akademik', function () {
         return view('admin.tahun.index');
+    });
+
+    // RUANGAN
+    Route::get('/ruangan', function () {
+        return view('admin.ruangan.index');
     });
 
     // DOSEN

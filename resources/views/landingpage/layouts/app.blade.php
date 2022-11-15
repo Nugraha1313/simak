@@ -57,7 +57,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{{ route('administrator') }}">Dashboard</a></li>
+                    <li><a class="nav-link scrollto active" href="{{ url('administrator/') }}">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

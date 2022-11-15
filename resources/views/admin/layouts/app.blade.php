@@ -7,12 +7,13 @@
   <link href="{{ asset('public/landingpage/img/favicon.png') }}" rel="icon">
   <title>Administrator | SIMAK</title>
 
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+   <!--     Fonts and icons     -->
+  {{-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /> --}}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Nucleo Icons -->
-  <link href="{{asset('public/admin/css/nucleo-icons.css')}}" rel="stylesheet" />
-  <link href="{{asset('public/admin/css/nucleo-svg.css')}} " rel="stylesheet" />
+  <link href="{{asset('public/dashboard/css/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href="{{asset('public/dashboard/css/nucleo-svg.css')}} " rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
   <script src="  https://kit.fontawesome.com/42d5adcbca.js " crossorigin="anonymous"></script>
@@ -22,14 +23,12 @@
   <link href="{{ asset('public/landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
   <!-- CSS Files -->
-  <link id="pagestyle" href=" {{asset('public/admin/css/soft-ui-dashboard.css?v=1.0.6')}} " rel="stylesheet" />
-
-  <!-- Fontawesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link id="pagestyle" href=" {{asset('public/dashboard/css/soft-ui-dashboard.css?v=1.0.6')}} " rel="stylesheet" />
 
   <!-- DataTables -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+
 
 </head>
 
@@ -232,11 +231,14 @@
   
   <!-- DataTables -->
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('#example').DataTable();
+      $('#example').DataTable({
+        pagingType: 'numbers',
+        info: false,
+      });
     });
   </script>
   <!-- Github buttons -->

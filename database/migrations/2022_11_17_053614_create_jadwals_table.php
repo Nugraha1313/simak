@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('jadwals', function (Blueprint $table) {
             $table->increments('id_jadwal');
             $table->integer('fk_matkul_jadwal');
-            $table->enum('hari_jadwal', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum"at']);
-            $table->time('waktu_jadwal', $precision = 4);
+            $table->enum('hari_jadwal', ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat']);
+            $table->string('waktu_jadwal');
             $table->integer('fk_dosen_jadwal');
             $table->integer('fk_ruangan_jadwal');
             $table->integer('fk_krs_jadwal');

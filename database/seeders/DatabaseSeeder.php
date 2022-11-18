@@ -21,17 +21,17 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $this->call([
-            DosensSeeder::class,
-            JadwalsSeeder::class,
-            KrsSeeder::class,
-            MahasiswasSeeder::class,
-            MatkulsSeeder::class,
-            NilaisSeeder::class,
-            RuangansSeeder::class,
-            TahunakademiksSeeder::class,
-            UsersSeeder::class,
-        ]);
-        
+        // $this->call([
+        //     DosensSeeder::class,
+        //     JadwalsSeeder::class,
+        //     KrsSeeder::class,
+        //     MahasiswasSeeder::class,
+        //     MatkulsSeeder::class,
+        //     NilaisSeeder::class,
+        //     RuangansSeeder::class,
+        //     TahunakademiksSeeder::class,
+        //     UsersSeeder::class,
+        // ]);
+
     }
 }

@@ -20,7 +20,7 @@ class JadwalsSeeder extends Seeder
             'id_jadwal' => 1,
             'fk_matkul_jadwal' => 1,
             'hari_jadwal' => 'Senin',
-            'waktu_jadwal' => '08:00',
+            'waktu_jadwal' => '08:00-10.30',
             'fk_dosen_jadwal' => 1,
             'fk_ruangan_jadwal' => 1,
             'fk_krs_jadwal' => 1,

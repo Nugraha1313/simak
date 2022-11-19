@@ -18,18 +18,18 @@
         rel="stylesheet">
 
     <!-- Vendor-lp CSS Files -->
-    <link href="{{ asset('public/landingpage/vendor-lp/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/remixicon/remixicon.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/landingpage/vendor-lp/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/vendor-lp/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
     <!-- Fontawesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Template Main CSS File -->
-    <link href="{{ asset('public/landingpage/css/landingpage.css') }}" rel="stylesheet">
+    <link href="{{ asset('landingpage/css/landingpage.css') }}" rel="stylesheet">
 
     <!-- =======================================================
   * Template Name: Bootslander - v4.9.1
@@ -81,7 +81,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                    <img src="{{ asset('public/landingpage/img/header.png') }}" class="img-fluid animated" alt="">
+                    <img src="{{ asset('landingpage/img/header.png') }}" class="img-fluid animated" alt="">
                 </div>
             </div>
         </div>
@@ -129,15 +129,15 @@
     <div id="preloader"></div>
 
     <!-- Vendor-lp JS Files -->
-    <script src="{{ asset('public/landingpage/vendor-lp/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('public/landingpage/vendor-lp/aos/aos.js') }}"></script>
-    <script src="{{ asset('public/landingpage/vendor-lp/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('public/landingpage/vendor-lp/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('public/landingpage/vendor-lp/swiper/swiper-bundle.min.js') }}"></script>
-    <script src="{{ asset('public/landingpage/vendor-lp/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/aos/aos.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('landingpage/vendor-lp/php-email-form/validate.js') }}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{{ asset('public/landingpage/js/landingpage.js') }}"></script>
+    <script src="{{ asset('landingpage/js/landingpage.js') }}"></script>
 
 </body>
 

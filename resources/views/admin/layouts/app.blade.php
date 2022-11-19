@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="{{ asset('public/landingpage/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('landingpage/img/favicon.png') }}" rel="icon">
   <title>Administrator | SIMAK</title>
 
    <!--     Fonts and icons     -->
@@ -12,18 +12,18 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Nucleo Icons -->
-  <link href="{{asset('public/dashboard/css/nucleo-icons.css')}}" rel="stylesheet" />
-  <link href="{{asset('public/dashboard/css/nucleo-svg.css')}} " rel="stylesheet" />
+  <link href="{{asset('dashboard/css/nucleo-icons.css')}}" rel="stylesheet" />
+  <link href="{{asset('dashboard/css/nucleo-svg.css')}} " rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
   <script src="  https://kit.fontawesome.com/42d5adcbca.js " crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   
   <!-- Bootstrap Icons -->
-  <link href="{{ asset('public/landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
   <!-- CSS Files -->
-  <link id="pagestyle" href=" {{asset('public/dashboard/css/soft-ui-dashboard.css?v=1.0.6')}} " rel="stylesheet" />
+  <link id="pagestyle" href=" {{asset('dashboard/css/soft-ui-dashboard.css?v=1.0.6')}} " rel="stylesheet" />
 
   <!-- DataTables -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
@@ -44,10 +44,10 @@
   </main>
 
   <!--   Core JS Files   -->
-  <script src="  {{asset('public/admin/js/core/popper.min.js')}} "></script>
-  <script src="  {{asset('public/admin/js/core/bootstrap.min.js')}} "></script>
-  <script src="  {{asset('public/admin/js/plugins/perfect-scrollbar.min.js')}} "></script>
-  <script src="  {{asset('public/admin/js/plugins/smooth-scrollbar.min.js')}} "></script>
+  <script src="  {{asset('admin/js/core/popper.min.js')}} "></script>
+  <script src="  {{asset('admin/js/core/bootstrap.min.js')}} "></script>
+  <script src="  {{asset('admin/js/plugins/perfect-scrollbar.min.js')}} "></script>
+  <script src="  {{asset('admin/js/plugins/smooth-scrollbar.min.js')}} "></script>
   {{-- <script src="  {{asset('../admin/js/plugins/chartjs.min.js')}} "></script> --}}
   {{-- <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DosenController;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,14 +46,10 @@ Route::prefix('administrator')->group(function () {
     });
 
     // DOSEN
-    Route::get('/dosen', function () {
-        return view('admin.dosen.index');
-    });
+    Route::resource('dosen',DosenController::class);
 
     // MAHASISWA
-    Route::get('/mahasiswa', function () {
-        return view('admin.mahasiswa.index');
-    });
+    Route::resource('mahasiswa',MahasiswaController::class);
 });
 
 

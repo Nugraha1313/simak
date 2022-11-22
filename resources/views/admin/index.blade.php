@@ -10,7 +10,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Mahasiswa</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $53,000
+                  {{ $jumlah_mahasiswa }}
                   <span class="text-success text-sm font-weight-bolder">+55%</span>
                 </h5>
               </div>
@@ -32,7 +32,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Dosen/Tendik</p>
                 <h5 class="font-weight-bolder mb-0">
-                  2,300
+                  {{ $jumlah_dosen }}
                   <span class="text-success text-sm font-weight-bolder">+3%</span>
                 </h5>
               </div>
@@ -54,7 +54,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Kurikulum</p>
                 <h5 class="font-weight-bolder mb-0">
-                  +3,462
+                  {{ $jumlah_kurikulum }}
                   <span class="text-danger text-sm font-weight-bolder">-2%</span>
                 </h5>
               </div>
@@ -76,7 +76,7 @@
               <div class="numbers">
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Tahun Akademik</p>
                 <h5 class="font-weight-bolder mb-0">
-                  $103,430
+                  {{ $jumlah_tahunakademik }}
                   <span class="text-success text-sm font-weight-bolder">+5%</span>
                 </h5>
               </div>

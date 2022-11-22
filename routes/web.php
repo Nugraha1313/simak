@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdministratorController;
+use App\Http\Controllers\DashboardMahasiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\DashboardMahasiswaKrsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +25,7 @@ Route::get('/', function () {
 
 //================= ADMIN ==================
 Route::prefix('administrator')->group(function () {
-    Route::get('/', function () {
-        return view('admin.index');
-    })->name('administrator');
+    Route::get('/', [AdministratorController::class, 'index'])->name('administrator');
 
     // KURIKULUM
     Route::get('/kurikulum', function () {
@@ -46,28 +48,22 @@ Route::prefix('administrator')->group(function () {
     });
 
     // DOSEN
-    Route::resource('dosen',DosenController::class);
+    Route::resource('dosen', DosenController::class);
 
     // MAHASISWA
-    Route::resource('mahasiswa',MahasiswaController::class);
+    Route::resource('mahasiswa', MahasiswaController::class);
 });
 
 
 //================= MAHASISWA =================
 Route::prefix('dashboard/mahasiswa')->group(function () {
-    Route::get('/', function () {
-        return view('mahasiswa.index');
-    })->name('dashboard.mahasiswa');
+    Route::get('/', [DashboardMahasiswaController::class, 'index'])->name('dashboard.mahasiswa');
 
     // JADWAL
-    Route::get('/jadwal', function () {
-        return view('mahasiswa.jadwal.index');
-    });
+    Route::get('/jadwal', [JadwalController::class, 'indexDashboardMahasiswa']);
 
     // KRS
-    Route::get('/krs', function () {
-        return view('mahasiswa.krs.index');
-    });
+    Route::resource('krs', DashboardMahasiswaKrsController::class);
 
     // KHS
     Route::get('/khs', function () {

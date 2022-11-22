@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('waktu_jadwal');
             $table->integer('fk_dosen_jadwal');
             $table->integer('fk_ruangan_jadwal');
-            $table->integer('fk_krs_jadwal');
+            $table->integer('fk_krs_jadwal')->nullable();
             $table->timestamps();
         });
     }

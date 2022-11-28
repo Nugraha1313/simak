@@ -19,3 +19,7 @@ php artisan key:generate
 ```bash
 php artisan serve
 ```
+
+# Screenshoot
+## 1. Landing Page
+![ss_final-project](https://user-images.githubusercontent.com/68648190/204215823-0fe78f23-b7c0-4219-b4d2-2f3c701b3a84.PNG)

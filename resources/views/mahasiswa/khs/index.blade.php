@@ -94,5 +94,38 @@
         </div>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <div class="card mb-4 border-0" style="border-radius: 20px;">
+          <div class="card-header border-0 pb-0" style="background-color: #fff; border-radius: 20px;">
+            <h4>Semester 1</h4>
+          </div>
+          <div class="card-body px-2 pt-0 pb-2">
+            <div class="table-responsive p-2">
+              <table class="table table-sm table-striped align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-center text-secondary text-xs font-weight-bolder opacity-7">NO.</th>
+                    <th class="text-center text-secondary text-xs font-weight-bolder opacity-7">Mata Kuliah</th>
+                    <th class="text-center text-secondary text-xs font-weight-bolder opacity-7">SKS</th>
+                    <th class="text-center text-secondary text-xs font-weight-bolder opacity-7">Nilai</th>
+                    <th class="text-center text-secondary text-xs font-weight-bolder opacity-7">Indeks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center font-sans" style="font-size: .9rem">
+                    <td>1</td>
+                    <td>Dasar Pemrograman</td>
+                    <td>2</td>
+                    <td>A</td>
+                    <td>4.0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 @endsection

@@ -61,6 +61,7 @@ Route::prefix('dashboard/mahasiswa')->group(function () {
 
     // JADWAL
     Route::get('/jadwal', [JadwalController::class, 'indexDashboardMahasiswa']);
+    Route::get('/jadwal/pdf', [PDFController::class, 'jadwalMahasiswaPDF']);
 
     // KRS
     Route::resource('krs', DashboardMahasiswaKrsController::class);

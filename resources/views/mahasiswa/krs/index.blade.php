@@ -34,10 +34,10 @@
         </div>
       </div>
       <div class="col align-self-end">
-        <button class="btn text-white" style="background-color: #ea0606">
+        <a href="{{ URL::to('/krs/pdf') }}" class="btn text-white" style="background-color: #ea0606">
           <i class="bi bi-printer"></i>
           <span style="font-size: .9rem;">Cetak KRS</span>
-        </button>
+        </a>
       </div>
     </div>
   </div>

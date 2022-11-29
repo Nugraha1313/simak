@@ -10,6 +10,10 @@
         </div>
         <div class="card-body px-2 pt-0 pb-2">
           <div class="table-responsive p-4">
+            <a href="{{ URL::to('/jadwal/pdf') }}" class="btn text-white" style="background-color: #ea0606">
+              <i class="bi bi-printer"></i>
+              <span style="font-size: .9rem;">Cetak Jadwal</span>
+            </a>
             <table class="table table-striped table-border align-items-center mb-0" id="example">
               <thead>
                 <tr>

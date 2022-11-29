@@ -17,12 +17,6 @@ class JadwalController extends Controller
         //
     }
 
-    public function indexDashboardMahasiswa()
-    {
-        $jadwal = Jadwal::all();
-        return view('mahasiswa.jadwal.index', compact('jadwal'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -87,5 +81,11 @@ class JadwalController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function indexDashboardMahasiswa()
+    {
+        $jadwal = Jadwal::all();
+        return view('mahasiswa.jadwal.index', compact('jadwal'));
     }
 }

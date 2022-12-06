@@ -1,0 +1,128 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Models\Jadwal;
+use App\Models\Dosen;
+use App\Models\Matkul;
+use App\Models\Ruangan;
+use App\Http\Requests\JadwalRequest;
+
+class JadwalController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $items = Jadwal::with(['matkul', 'dosen', 'ruangan'])->get();
+
+        return view('admin.kurikulum.index')->with([
+            'items' => $items
+        ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $matkul = Matkul::all();
+        $dosen = Dosen::all();
+        $ruangan = Ruangan::all();
+        $haris = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'];
+
+        return view('admin.kurikulum.create')->with([
+            'matkul' => $matkul,
+            'dosen' => $dosen,
+            'ruangan' => $ruangan,
+            'haris' => $haris,
+        ]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(JadwalRequest $request)
+    {
+        $data = $request->all();
+        Jadwal::create($data);
+
+        return redirect('kurikulum.index')->with('status', 'Data berhasil ditambahkan!');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        $item = Jadwal::with(['matkul', 'dosen', 'ruangan'])->findOrFail($id);
+
+        $matkul = Matkul::all();
+        $dosen = Dosen::all();
+        $ruangan = Ruangan::all();
+        $haris = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'];
+
+        return view('admin.kurikulum.edit')->with([
+            'item' => $item,
+            'matkul' => $matkul,
+            'dosen' => $dosen,
+            'ruangan' => $ruangan,
+            'haris' => $haris,
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(JadwalRequest $request, $id)
+    {
+        $data = $request->all();
+
+        $item = Jadwal::findorfail($id);
+        $item->update($data);
+
+        return redirect('kurikulum.index')->with('status', 'Data berhasil diubah!');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $item = Jadwal::findorfail($id);
+        $item->delete();
+
+        return redirect('kurikulum.index')->with('status', 'Data berhasil dihapus!');
+    }
+}

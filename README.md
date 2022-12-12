@@ -24,5 +24,5 @@ php artisan serve
 ## 1. Landing Page
 ![ss_final-project](https://user-images.githubusercontent.com/68648190/204215823-0fe78f23-b7c0-4219-b4d2-2f3c701b3a84.PNG)
 
-## 2. Admin Page
+## 2. Dashboard Page
 ![ss_final-project-2](https://user-images.githubusercontent.com/68648190/204223970-15b60a22-1b14-493b-9278-2ebcc621d462.PNG)

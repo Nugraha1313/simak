@@ -13,7 +13,7 @@ class JadwalRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,12 +24,13 @@ class JadwalRequest extends FormRequest
     public function rules()
     {
         return [
-            'fk_matkul_jadwal' => 'required|integer', 
-            'hari_jadwal' => 'required', 
-            'wakttu_jadwal' => 'required', 
-            'fk_dosen_jadwal' => 'required|integer', 
-            'fk_ruangan_jadwal'  => 'required|integer', 
-            'fk_krs_jadwal'  => 'required|integer',
+            'fk_matkul_jadwal' => 'required|integer',
+            'hari_jadwal' => 'required',
+            'waktu_jadwal' => 'required',
+            'fk_dosen_jadwal' => 'required|integer',
+            'fk_ruangan_jadwal'  => 'required|integer',
+            // 'fk_ta_jadwal'  => 'integer',
+            // 'fk_krs_jadwal'  => 'required|integer',
         ];
     }
 }

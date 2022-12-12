@@ -25,6 +25,53 @@ class MahasiswaController extends Controller
         ]);
     }
 
+     public function apiMahasiswa()
+    {
+        //menampilkan seluruh data
+        $mahasiswa = Mahasiswa::all();
+        // $dosen = Dosen::join('jabatan', 'jabatan.id', '=', 'pegawai.jabatan_id')
+        //         ->join('divisi', 'divisi.id', '=', 'pegawai.divisi_id')
+        //         ->select('pegawai.nip','pegawai.nama','pegawai.gender','jabatan.nama AS posisi',
+        //          'divisi.nama AS bagian','pegawai.tmp_lahir','pegawai.tgl_lahir',
+        //          'pegawai.alamat',)
+        //         ->get();
+        return response()->json(
+            [
+                'success'=>true,
+                'message'=>'Data Mahasiswa',
+                'data'=>$mahasiswa,
+            ],200);
+    }
+
+    public function apiMahasiswaDetail($id)
+    {
+        //menampilkan detail data seorang pegawai
+        $mahasiswa = Mahasiswa::find($id);
+        // $dosen = Dosen::join('jabatan', 'jabatan.id', '=', 'pegawai.jabatan_id')
+        // ->join('divisi', 'divisi.id', '=', 'pegawai.divisi_id')
+        // ->select('pegawai.nip','pegawai.nama','pegawai.gender','jabatan.nama AS posisi',
+        //  'divisi.nama AS bagian','pegawai.tmp_lahir','pegawai.tgl_lahir',
+        //  'pegawai.alamat',)
+        // ->where('pegawai.id', '=', $id)
+        // ->get();
+
+        if($mahasiswa){ //jika data pegawai ditemukan
+            return response()->json(
+                [
+                    'success'=>true,
+                    'message'=>'Detail Mahasiswa',
+                    'data'=>$mahasiswa,
+                ],200);
+        }
+        else{ //jika data pegawai tidak ditemukan
+            return response()->json(
+                [
+                    'success'=>false,
+                    'message'=>'Detail Mahasiswa Tidak ditemukan',
+                ],404);
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -44,7 +91,7 @@ class MahasiswaController extends Controller
     public function store(MahasiswaRequest $request)
     {
         $data = $request->all();
-        
+
         $fotoName = $data['foto_mahasiswa']->getClientOriginalName() . '-' . time(). '.' . $data['foto_mahasiswa']->extension();
         $data['foto_mahasiswa']->move(public_path('admin/img/profile/mahasiswa'), $fotoName);
 
@@ -148,7 +195,7 @@ class MahasiswaController extends Controller
         }else{
             $password = Hash::make($data['password']);
         }
-        
+
         User::where('id', $user->id)
         ->update([
             'name' => $data['nama_mahasiswa'],

@@ -25,6 +25,54 @@ class DosenController extends Controller
         ]);
     }
 
+     public function apiDosen()
+    {
+        //menampilkan seluruh data
+        $dosen = Dosen::all();
+        // $dosen = Dosen::join('jabatan', 'jabatan.id', '=', 'pegawai.jabatan_id')
+        //         ->join('divisi', 'divisi.id', '=', 'pegawai.divisi_id')
+        //         ->select('pegawai.nip','pegawai.nama','pegawai.gender','jabatan.nama AS posisi',
+        //          'divisi.nama AS bagian','pegawai.tmp_lahir','pegawai.tgl_lahir',
+        //          'pegawai.alamat',)
+        //         ->get();
+        return response()->json(
+            [
+                'success'=>true,
+                'message'=>'Data Dosen',
+                'data'=>$dosen,
+            ],200);
+    }
+
+    public function apiDosenDetail($id)
+    {
+        //menampilkan detail data seorang pegawai
+        $dosen = Dosen::find($id);
+        // $dosen = Dosen::join('jabatan', 'jabatan.id', '=', 'pegawai.jabatan_id')
+        // ->join('divisi', 'divisi.id', '=', 'pegawai.divisi_id')
+        // ->select('pegawai.nip','pegawai.nama','pegawai.gender','jabatan.nama AS posisi',
+        //  'divisi.nama AS bagian','pegawai.tmp_lahir','pegawai.tgl_lahir',
+        //  'pegawai.alamat',)
+        // ->where('pegawai.id', '=', $id)
+        // ->get();
+
+        if($dosen){ //jika data pegawai ditemukan
+            return response()->json(
+                [
+                    'success'=>true,
+                    'message'=>'Detail Dosen',
+                    'data'=>$dosen,
+                ],200);
+        }
+        else{ //jika data pegawai tidak ditemukan
+            return response()->json(
+                [
+                    'success'=>false,
+                    'message'=>'Detail Dosen Tidak ditemukan',
+                ],404);
+        }
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -44,7 +92,7 @@ class DosenController extends Controller
     public function store(DosenRequest $request)
     {
         $data = $request->all();
-        
+
         $fotoName = $data['foto_dosen']->getClientOriginalName() . '-' . time(). '.' . $data['foto_dosen']->extension();
         $data['foto_dosen']->move(public_path('admin/img/profile/dosen'), $fotoName);
 
@@ -148,7 +196,7 @@ class DosenController extends Controller
         }else{
             $password = Hash::make($data['password']);
         }
-        
+
         User::where('id', $user->id)
         ->update([
             'name' => $data['nama_dosen'],

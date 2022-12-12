@@ -27,7 +27,7 @@ class Jadwal extends Model
     {
         return $this->belongsTo(Dosen::class,'fk_dosen_jadwal','id');
     }
-    
+
     public function krs()
     {
         return $this->hasMany(Krs::class,'fk_jadwal_krs');
@@ -37,4 +37,10 @@ class Jadwal extends Model
     {
         return $this->hasMany(Nilai::class,'fk_jadwal_nilai');
     }
+
+    // public function tahunAkademik() {
+    //     return $this->belongsTo(TahunAkademik::class, 'fk_ta_jadwal', 'id');
+    // }
+
+
 }

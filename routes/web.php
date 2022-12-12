@@ -61,7 +61,7 @@ Route::middleware('auth:administrator')->group(function () {
     // Route::get('/dosen', function () {
     //     return view('admin.dosen.index');
     // });
-    
+
     // MAHASISWA
     Route::resource('/mahasiswa', MahasiswaController::class);
     // Route::get('/mahasiswa', function () {
@@ -114,3 +114,9 @@ Route::middleware('auth:dosen')->group(function () {
 Route::get('/login', [AuthController::class, 'firstlogin'])->name('login');
 Route::post('/lastlogin', [AuthController::class, 'lastlogin'])->name('lastlogin');
 Route::post('/', [AuthController::class, 'logout'])->name('logout');
+
+//---- Tugas 1 Rest API-----
+Route::get('/api-dosen', [DosenController::class, 'apiDosen']);
+Route::get('/api-dosen/{id}', [DosenController::class, 'apiDosenDetail']);
+Route::get('/api-mahasiswa', [MahasiswaController::class, 'apiMahasiswa']);
+Route::get('/api-mahasiswa/{id}', [MahasiswaController::class, 'apiMahasiswaDetail']);

@@ -9,6 +9,8 @@ use App\Models\Dosen;
 use App\Models\Matkul;
 use App\Models\Ruangan;
 use App\Http\Requests\JadwalRequest;
+use App\Models\TahunAkademik;
+use Symfony\Component\VarDumper\VarDumper;
 
 class JadwalController extends Controller
 {
@@ -19,10 +21,14 @@ class JadwalController extends Controller
      */
     public function index()
     {
+        $tahun = TahunAkademik::where('status_tahunakademik', '=', 1)->first();
+        // VarDumper::dump($tahun);
         $items = Jadwal::with(['matkul', 'dosen', 'ruangan'])->get();
+        // $items = Jadwal::with(['matkul', 'dosen', 'ruangan', 'tahun'])->get();
 
         return view('admin.kurikulum.index')->with([
-            'items' => $items
+            'items' => $items,
+            'tahun' => $tahun
         ]);
     }
 
@@ -36,6 +42,8 @@ class JadwalController extends Controller
         $matkul = Matkul::all();
         $dosen = Dosen::all();
         $ruangan = Ruangan::all();
+        $tahun = TahunAkademik::where('status_tahunakademik', '=', 1)->first();
+        // VarDumper::dump($tahun);
         $haris = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat'];
 
         return view('admin.kurikulum.create')->with([
@@ -43,6 +51,7 @@ class JadwalController extends Controller
             'dosen' => $dosen,
             'ruangan' => $ruangan,
             'haris' => $haris,
+            'tahun' => $tahun
         ]);
     }
 
@@ -56,8 +65,8 @@ class JadwalController extends Controller
     {
         $data = $request->all();
         Jadwal::create($data);
-
-        return redirect('kurikulum.index')->with('status', 'Data berhasil ditambahkan!');
+        return redirect()->route('kurikulum.index')->with('status', 'Data berhasil ditambahkan!');
+        // return redirect('kurikulum.index')->with('status', 'Data berhasil ditambahkan!');
     }
 
     /**
@@ -80,7 +89,7 @@ class JadwalController extends Controller
     public function edit($id)
     {
         $item = Jadwal::with(['matkul', 'dosen', 'ruangan'])->findOrFail($id);
-
+        $tahun = TahunAkademik::where('status_tahunakademik', '=', 1)->first();
         $matkul = Matkul::all();
         $dosen = Dosen::all();
         $ruangan = Ruangan::all();
@@ -92,6 +101,7 @@ class JadwalController extends Controller
             'dosen' => $dosen,
             'ruangan' => $ruangan,
             'haris' => $haris,
+            'tahun' => $tahun
         ]);
     }
 
@@ -108,8 +118,8 @@ class JadwalController extends Controller
 
         $item = Jadwal::findorfail($id);
         $item->update($data);
-
-        return redirect('kurikulum.index')->with('status', 'Data berhasil diubah!');
+        // return redirect('kurikulum.index')->with('status', 'Data berhasil diubah!');
+        return redirect()->route('kurikulum.index')->with('status', 'Data berhasil diubah!');
     }
 
     /**
@@ -122,7 +132,7 @@ class JadwalController extends Controller
     {
         $item = Jadwal::findorfail($id);
         $item->delete();
-
-        return redirect('kurikulum.index')->with('status', 'Data berhasil dihapus!');
+        return redirect()->route('kurikulum.index')->with('status', 'Data berhasil dihapus!');
+        // return redirect('kurikulum.index')->with('status', 'Data berhasil dihapus!');
     }
 }

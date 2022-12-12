@@ -5,7 +5,6 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 
 use App\Models\Jadwal;
-
 use Illuminate\Http\Request;
 
 class JadwalController extends Controller

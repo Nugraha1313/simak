@@ -17,6 +17,7 @@ class TahunAkademikController extends Controller
     {
         $items = TahunAkademik::all();
 
+
         return view('admin.tahun.index')->with([
             'items' => $items
         ]);

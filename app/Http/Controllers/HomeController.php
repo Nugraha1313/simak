@@ -9,6 +9,7 @@ use App\Models\Jadwal;
 use App\Models\TahunAkademik;
 use App\Models\Nilai;
 use App\Models\Krs;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -21,17 +22,29 @@ class HomeController extends Controller
      */
     public function dashboardAdministrator()
     {
-        $mahasiswa = Mahasiswa::count();
-        $dosen = Dosen::count();
-        $jadwal = Jadwal::count();
-        $ta = TahunAkademik::count();
+        // $mahasiswa = Mahasiswa::count();
+        // $dosen = Dosen::count();
+        // $jadwal = Jadwal::count();
+        // $ta = TahunAkademik::count();
 
-        return view('admin.index')->with([
-            'mahasiswa' => $mahasiswa,
-            'dosen' => $dosen,
-            'jadwal' => $jadwal,
-            'ta' => $ta,
-        ]);
+        // return view('admin.index')->with([
+        //     'mahasiswa' => $mahasiswa,
+        //     'dosen' => $dosen,
+        //     'jadwal' => $jadwal,
+        //     'ta' => $ta,
+        // ]);
+
+        // chart gender dosen
+        $ar_gender_dosen = DB::table('dosens')
+            ->selectRaw('gender_dosen, count(gender_dosen) as jumlah')
+            ->groupBy('gender_dosen')
+            ->get();
+        $ar_gender_mahasiswa = DB::table('mahasiswas')
+            ->selectRaw('gender_mahasiswa, count(gender_mahasiswa) as jumlah')
+            ->groupBy('gender_mahasiswa')
+            ->get();
+        return view('admin.index', compact('ar_gender_dosen', 'ar_gender_mahasiswa'));
+
     }
 
     /**
@@ -68,7 +81,7 @@ class HomeController extends Controller
     {
         $dosen = $request->session()->get('dosen');
         $ta = TahunAkademik::where('status_tahunakademik', 1)->first();
-        
+
         $items = Jadwal::where('fk_dosen_jadwal', $dosen->id)->where('fk_ta_jadwal', $ta->id)->with(['matkul'])->get();
         $sumMatkul = 0;
         foreach ($items as $item) {

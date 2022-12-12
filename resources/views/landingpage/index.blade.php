@@ -106,16 +106,16 @@
 
                     <div class="col-lg col-md-6">
                         <div class="member" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-1.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('landingpage/img/team/nugraha.jpg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>M.Aulia Nugraha</h4>
-                                <span>Product Manager</span>
+                                <span>Team Leader</span>
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+                                    <a href="https://github.com/Nugraha1313"><i class="bi bi-github"></i></a>
+                                    <a href="https://www.instagram.com/aulia.nugraha/"><i class="bi bi-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/muhamad-aulia-nugraha/"><i
+                                            class="bi bi-linkedin"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -123,8 +123,8 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-md-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-2.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('landingpage/img/team/fathimah.jpeg') }}"
+                                    class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Fathimah</h4>
                                 <span>Programmer</span>
@@ -140,7 +140,7 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-3.jpg') }}" class="img-fluid"
+                            <div class="pic"><img src="{{ asset('landingpage/img/team/cindy.jpeg') }}" class="img-fluid"
                                     alt=""></div>
                             <div class="member-info">
                                 <h4>Cindy</h4>
@@ -157,8 +157,8 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-4.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('landingpage/img/team/rendi.jpeg') }}"
+                                    class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Rendi</h4>
                                 <span>Programmer</span>
@@ -174,8 +174,8 @@
 
                     <div class="col-lg col-md-6 mt-5 mt-lg-0">
                         <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="pic"><img src="{{ asset('landingpage/img/team/team-2.jpg') }}" class="img-fluid"
-                                    alt=""></div>
+                            <div class="pic"><img src="{{ asset('landingpage/img/team/muthia.jpeg') }}"
+                                    class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Muthia</h4>
                                 <span>Programmer</span>

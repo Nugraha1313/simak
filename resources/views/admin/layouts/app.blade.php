@@ -18,7 +18,7 @@
   <!-- Font Awesome Icons -->
   <script src="  https://kit.fontawesome.com/42d5adcbca.js " crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  
+
   <!-- Bootstrap Icons -->
   <link href="{{ asset('landingpage/vendor-lp/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
 
@@ -46,6 +46,8 @@
   <!--   Core JS Files   -->
   <script src="  {{asset('admin/js/core/popper.min.js')}} "></script>
   <script src="  {{asset('admin/js/core/bootstrap.min.js')}} "></script>
+  <script src="  {{asset('admin/js/plugins/chartjs.min.js')}} "></script>
+  <script src="  {{asset('admin/js/plugins/Chart.extension.js')}} "></script>
   <script src="  {{asset('admin/js/plugins/perfect-scrollbar.min.js')}} "></script>
   <script src="  {{asset('admin/js/plugins/smooth-scrollbar.min.js')}} "></script>
   {{-- <script src="  {{asset('../admin/js/plugins/chartjs.min.js')}} "></script> --}}
@@ -228,7 +230,7 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
-  
+
   <!-- DataTables -->
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>

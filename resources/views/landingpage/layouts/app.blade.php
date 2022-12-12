@@ -57,7 +57,7 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{{ url('administrator/') }}">Dashboard</a></li>
+                    <li><a class="nav-link scrollto active" href="{{ route('login') }}">Dashboard</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -114,13 +114,13 @@
             <div class="copyright">
                 &copy; Copyright <strong><span>Simak</span></strong>. All Rights Reserved
             </div>
-            <div class="credits">
+            {{-- <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
                 Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
+            </div> --}}
         </div>
     </footer><!-- End Footer -->
 

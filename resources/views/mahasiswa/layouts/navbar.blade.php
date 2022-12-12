@@ -2,9 +2,19 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+            {{-- <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li> --}}
+            {{-- <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li> --}}
           </ol>
+            @if (Request::path() == 'dashboard/mahasiswa')
+              {{-- <h6 class="font-weight-bolder mb-0 text-capitalize">{{ str_replace('-', ' ', Request::path()) }}</h6> --}}
+              <h6 class="font-weight-bolder mb-0 text-capitalize">Dashboard</h6>
+            @elseif (Request::path() == 'dashboard/mahasiswa/krs')
+              <h6 class="font-weight-bolder mb-0 text-capitalize">Kartu Rencana Studi (KRS)</h6>
+            @elseif (Request::path() == 'dashboard/mahasiswa/jadwal')
+              <h6 class="font-weight-bolder mb-0 text-capitalize">Jadwal Perkuliahan</h6>
+            @elseif (Request::path() == 'dashboard/mahasiswa/khs')
+              <h6 class="font-weight-bolder mb-0 text-capitalize">Kartu Hasil Studi (KHS)</h6>
+            @endif
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -15,14 +25,14 @@
           </div>
           <ul class="navbar-nav justify-content-end">
             {{-- SETTING PROFILE --}}
-            <li class="nav-item px-3 d-flex align-items-center">
+            {{-- <li class="nav-item px-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0">
                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
               </a>
-            </li>
+            </li> --}}
             {{-- LOGOUT --}}
             <li class="nav-item d-flex align-items-center">
-              <a href="{{ route('logout') }}" 
+              <a href="{{ route('logout') }}"
               class="nav-link text-body font-weight-bold px-0" style="color: rgba(1, 4, 136, 0.9)"
               onclick="event.preventDefault();
                 document.getElementById('logout').submit();">

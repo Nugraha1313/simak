@@ -12,7 +12,7 @@
     <ul class="navbar-nav">
       {{-- DASHBOARD --}}
       <li class="nav-item">
-        <a class="nav-link active" href="{{ route('administrator') }} ">
+        <a class="nav-link {{ (Request::is('/') ? 'active' : '') }}" href="{{ route('administrator') }} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-speedometer fs-6"></i>
           </div>
@@ -21,7 +21,7 @@
       </li>
       {{-- KURIKULUM --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('kurikulum.index') }}">
+        <a class="nav-link {{ (Request::is('kurikulum') ? 'active' : '') }}" href="{{ route('kurikulum.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-layout-text-sidebar-reverse fs-6"></i>
           </div>
@@ -34,7 +34,7 @@
       </li>
       {{-- DATA DOSEN --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('dosen.index') }}">
+        <a class="nav-link {{ (Request::is('dosen') ? 'active' : '') }}" href="{{ route('dosen.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-person-lines-fill fs-6"></i>
           </div>
@@ -43,7 +43,7 @@
       </li>
       {{-- DATA MAHASISWA --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('mahasiswa.index') }}">
+        <a class="nav-link {{ (Request::is('mahasiswa') ? 'active' : '') }}" href="{{ route('mahasiswa.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-people-fill fs-6"></i>
           </div>
@@ -52,7 +52,7 @@
       </li>
       {{-- TAHUN AKADEMIK --}}
       <li class="nav-item">
-        <a class="nav-link  " href="{{ route('tahun-akademik.index') }}">
+        <a class="nav-link {{ (Request::is('tahun-akademik') ? 'active' : '') }}" href="{{ route('tahun-akademik.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-calendar-fill fs-6"></i>
           </div>
@@ -61,7 +61,7 @@
       </li>
       {{-- MATA KULIAH --}}
       <li class="nav-item">
-        <a class="nav-link  " href="{{ route('mata-kuliah.index') }}">
+        <a class="nav-link {{ (Request::is('mata-kuliah') ? 'active' : '') }}" href="{{ route('mata-kuliah.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-card-list fs-6"></i>
           </div>
@@ -70,7 +70,7 @@
       </li>
       {{-- RUANGAN --}}
       <li class="nav-item">
-        <a class="nav-link  " href="{{ route('ruangan.index') }}">
+        <a class="nav-link {{ (Request::is('ruangan') ? 'active' : '') }}" href="{{ route('ruangan.index') }}">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-grid-1x2 fs-6"></i>
           </div>

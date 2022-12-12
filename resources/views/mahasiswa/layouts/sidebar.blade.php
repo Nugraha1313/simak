@@ -12,7 +12,7 @@
     <ul class="navbar-nav">
       {{-- DASHBOARD --}}
       <li class="nav-item">
-        <a class="nav-link active" href=" {{route('dashboard.mahasiswa')}} ">
+        <a class="nav-link {{ (Request::is('dashboard/mahasiswa') ? 'active' : '') }}" href=" {{route('dashboard.mahasiswa')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-speedometer fs-6"></i>
           </div>
@@ -25,7 +25,7 @@
       </li>
       {{-- KRS --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{url('dashboard/mahasiswa/krs')}} ">
+        <a class="nav-link {{ (Request::is('dashboard/mahasiswa/krs') ? 'active' : '') }}" href="{{url('dashboard/mahasiswa/krs')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-layout-text-sidebar-reverse fs-6"></i>
           </div>
@@ -34,7 +34,7 @@
       </li>
       {{-- JADWAL --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{url('dashboard/mahasiswa/jadwal')}} ">
+        <a class="nav-link {{ (Request::is('dashboard/mahasiswa/jadwal') ? 'active' : '') }}" href="{{url('dashboard/mahasiswa/jadwal')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-layout-text-sidebar-reverse fs-6"></i>
           </div>
@@ -47,7 +47,7 @@
       </li>
       {{-- KHS --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{url('dashboard/mahasiswa/khs')}} ">
+        <a class="nav-link {{ (Request::is('dashboard/mahasiswa/khs') ? 'active' : '') }}" href="{{url('dashboard/mahasiswa/khs')}} ">
           <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
             <i class="bi bi-layout-text-sidebar-reverse fs-6"></i>
           </div>

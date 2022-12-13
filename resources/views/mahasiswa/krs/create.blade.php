@@ -33,27 +33,27 @@
             <input type="hidden" name="taId" value="{{ $taId }}">
             <input type="hidden" name="sumSks" value="{{ $sumSks }}">
             <input type="hidden" name="maksSks" value="{{ $maksSks }}">
-          @forelse ($data as $index => $item)
-            <tr class="text-center font-sans" style="font-size: .9rem;">
-              <td>{{ $index+1 }}</td>
-              <td>{{ $item->hari_jadwal }}</td>
-              <td>{{ $item->waktu_jadwal }}</td>
-              <td>{{ $item->ruangan->kode_ruangan }}</td>
-              <td>{{ $item->matkul->kode_matkul }}</td>
-              <td>{{ $item->matkul->nama_matkul }}</td>
-              <td class="text-center">{{ $item->matkul->sks_matkul }}</td>
-              <td>{{ $item->dosen->nama_dosen }}</td>
-              <td>
-                <input class="form-check-input" type="checkbox" id="defaultCheck{{ $item->id }}" value="{{ $item->id }}" name="matkul[]">
-              </td>
-            </tr>
-          @empty
-            <tr>
-              <td colspan="9" class="text-center">
-                Data tidak tersedia
-              </td>
-            </tr>
-          @endforelse
+            @forelse ($data as $index => $item)
+              <tr class="text-center font-sans" style="font-size: .9rem;">
+                <td>{{ $index+1 }}</td>
+                <td>{{ $item->hari_jadwal }}</td>
+                <td>{{ $item->waktu_jadwal }}</td>
+                <td>{{ $item->ruangan->kode_ruangan }}</td>
+                <td>{{ $item->matkul->kode_matkul}}</td>
+                <td>{{ $item->matkul->nama_matkul }}</td>
+                <td class="text-center">{{ $item->matkul->sks_matkul }}</td>
+                <td>{{ $item->dosen->nama_dosen }}</td>
+                <td>
+                  <input class="form-check-input" type="checkbox" id="defaultCheck{{ $item->id }}" value="{{ $item->id }}" name="matkul[]">
+                </td>
+              </tr>
+            @empty
+              <tr>
+                <td colspan="9" class="text-center">
+                  Data tidak tersedia
+                </td>
+              </tr>
+            @endforelse
           </tbody>
         </table>
         <div class="col-sm-10">

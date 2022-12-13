@@ -68,7 +68,7 @@ Route::middleware('auth:administrator')->prefix('administrator')->group(function
     
     // KRS
     Route::resource('/krs', KrsController::class);
-    Route::get('/krs/pdf', [HomeController::class, 'krs'])->name('krsPDF.mahasiswa');
+    Route::get('/krs/pdf', [HomeController::class, 'krsPDF'])->name('krsPDF.mahasiswa');
     
     // KHS
     Route::get('/khs', [HomeController::class, 'khs'])->name('khs');

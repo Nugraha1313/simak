@@ -95,36 +95,45 @@ class KrsController extends Controller
      */
     public function create(Request $request)
     {
+        // ambil session mahasiswa
         $mahasiswa = $request->session()->get('mahasiswa');
+
+        // ambil tahun akademik aktif
         $ta = TahunAkademik::where('status_tahunakademik', 1)->first();
 
-        $krsMhs = Krs::where('fk_mahasiswa_krs', $mahasiswa->id)->where('fk_ta_krs', $ta->id)->with(['jadwal'])->get();
+        // ambil jadwal yang sudah dimasukkan ke krs
+        $krsMahasiswas = Krs::where('fk_mahasiswa_krs', $mahasiswa->id)->where('fk_ta_krs', $ta->id)->with(['jadwal'])->get();
 
-        foreach ($krsMhs as $index => $krsmhs) {
-            $krsId[] = $krsmhs->fk_jadwal_krs;
+        // ambil id dari jadwal yang sudah dimasukkan ke krs
+        foreach($krsMahasiswas as $index => $krsMahasiswa){
+            $idKrs[] = $krsMahasiswa->fk_jadwal_krs;
         }
-        
+
+        // ambil total sks krs mahasiswa
         $sumSks = 0;
         $maksSks = 24;
-        foreach ($krsMhs as $item) {
+        foreach($krsMahasiswas as $item){ 
             $sumSks = $sumSks + $item->jadwal->matkul->sks_matkul;
         }
-        
-        $items = Jadwal::where('fk_ta_jadwal', $ta->id)->with(['matkul', 'dosen', 'ruangan'])->get();
-        foreach ($items as $index => $item) {
-            $jadwalId[] = $item->id;
+
+        // ambil seluruh jadwal
+        $items = Jadwal::where('fk_ta_jadwal', $ta->id)->with(['matkul','ruangan','dosen'])->get();
+
+        // ambil seluruh id jadwal
+        foreach($items as $index => $item){
+            $idJadwal[] = $item->id;
         }
 
 
-        if (count($krsMhs) == 0) {
-            $data =Jadwal::where('fk_ta_jadwal', $ta->id)->with(['matkul', 'dosen', 'ruangan'])->get();
-        } else {
-            $results = array_diff($jadwalId, $krsId);
-            foreach ($results as $result) {
+        if(count($krsMahasiswas) == 0){
+            $data = Jadwal::where('fk_ta_jadwal', $ta->id)->with(['matkul','ruangan','dosen'])->get();
+        }else{
+            $results = array_diff($idJadwal,$idKrs);
+            foreach($results as $result){
                 $datas[] = Jadwal::where('id', $result)->get();
             }
-            foreach ($datas as $data) {
-               $data[] = $item[0];
+            foreach($datas as $item){
+                $data[] = $item[0];
             }
         }
 

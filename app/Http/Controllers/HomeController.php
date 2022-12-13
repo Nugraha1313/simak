@@ -217,7 +217,7 @@ class HomeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function krs(Request $request)
+    public function krsPDF(Request $request)
     {
         $mahasiswa = $request->session()->get('mahasiswa');
         $ta = TahunAkademik::where('status_tahunakademik', 1)->first();

@@ -7,6 +7,7 @@ use App\Models\TahunAkademik;
 use App\Http\Resources\TahunAkademikResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Termwind\Components\Raw;
 
 class TahunAkademikController extends Controller
 {
@@ -46,4 +47,28 @@ class TahunAkademikController extends Controller
 
         return new TahunAkademikResource(true, 'Data Tahun Akademik Berhasil diinput',$data);
     }
+
+    public function update(Request $request, $id) {
+
+        $validator = Validator::make($request->all(), [
+           'kode_tahunakademik' => 'required'
+        ]);
+
+        if($validator->fails()) {
+            return response()->json($validator->errors(), 422);
+        }
+        $tahunAkademik = TahunAkademik::whereId($id)->update([
+            'kode_tahunakademik' => $request->kode_tahunakademik,
+        ]);
+
+        return new TahunAkademikResource(true, 'Data Tahun Akademik Berhasil diupdate',$tahunAkademik);
+
+    }
+
+    public function destroy($id) {
+        $tahunAkademik = TahunAkademik::whereId($id)->first();
+        $tahunAkademik->delete();
+        return new TahunAkademikResource(true, 'Data Tahun Akademik Berhasil dihapus', $tahunAkademik);
+    }
+
 }

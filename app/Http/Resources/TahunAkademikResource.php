@@ -34,4 +34,6 @@ class TahunAkademikResource extends JsonResource
             'data'=>$this->resource
         ];
     }
+
+
 }

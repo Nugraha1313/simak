@@ -10,6 +10,7 @@ Final Project Sistem Informasi Akademik MSIB
 git clone https://github.com/Nugraha1313/simak.git
 cd simak
 composer install
+npm install
 cp .env.example .env
 php artisan key:generate
 ```

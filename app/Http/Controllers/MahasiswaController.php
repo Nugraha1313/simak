@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\Mahasiswa;
 use App\Models\User;
 use App\Http\Requests\MahasiswaRequest;
+use App\Exports\MahasiswaExport;
 use Illuminate\Support\Facades\Hash;
 use Alert;
+use Maatwebsite\Excel\Facades\Excel;
 
 class MahasiswaController extends Controller
 {
@@ -176,5 +178,11 @@ class MahasiswaController extends Controller
         User::where('id', $user['id'])->delete();
 
         return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa Berhasil Dihapus!');
+    }
+
+    // export data mahasiswa to file excel
+    public function export()
+    {
+        return Excel::download(new MahasiswaExport, 'data-mahasiswa.xlsx');
     }
 }

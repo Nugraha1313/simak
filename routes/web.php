@@ -47,9 +47,11 @@ Route::middleware('auth:administrator')->prefix('administrator')->group(function
 
     // DOSEN
     Route::resource('/dosen', DosenController::class);
+    Route::get('/dosen-export', [DosenController::class, 'export'])->name('dosen.export');
     
     // MAHASISWA
     Route::resource('/mahasiswa', MahasiswaController::class);
+    Route::get('/mahasiswa-export', [MahasiswaController::class, 'export'])->name('mahasiswa.export');
 
 });
     

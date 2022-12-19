@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 use App\Models\Dosen;
 use App\Models\User;
 use App\Http\Requests\DosenRequest;
+use App\Exports\DosenExport;
 use Illuminate\Support\Facades\Hash;
 use Alert;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DosenController extends Controller
 {
@@ -178,4 +180,9 @@ class DosenController extends Controller
         return redirect()->route('dosen.index')->with('success', 'Data Dosen Berhasil Dihapus!');
     }
 
+    // export data dosen to file excel
+    public function export()
+    {
+        return Excel::download(new DosenExport, 'data-dosen.xlsx');
+    }
 }

@@ -6,7 +6,11 @@
             <div class="card mb-4 border-0" style="border-radius: 20px;">
                 <div class="card-header border-0 pb-0" style="background-color: #fff; border-radius: 20px;">
                     <div class="col">
-                        <a type="submit" href="{{ route('mahasiswa.create') }}" class="btn btn-primary pull-right">Add</a>
+                        <a type="submit" href="{{ route('mahasiswa.create') }}" class="btn btn-primary pull-right me-2">Add</a>
+                        <a href="{{ route('mahasiswa.export') }}" class="btn text-white" style="background-color: #0be61e">
+                            <i class="fas fa-file-excel"></i>
+                            <span style="font-size: .9rem;">Export</span>
+                        </a>
                         <div class="clearfix"></div>
                     </div>
                     <h4>Data Mahasiswa</h4>
